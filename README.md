@@ -1,38 +1,64 @@
-# ⚡ Project Bolt – 3D Animated Weather Portfolio App
+SELECT * FROM employee;
+SELECT COUNT(*) FROM employee;
 
-A fully functional, immersive, and responsive portfolio website featuring real-time weather data, stunning 3D visuals, and interactive animations. Built using React, Tailwind CSS, Three.js, and Framer Motion.
+SELECT MAX(daily_typing_pages) FROM employee_tbl;
+SELECT id, name, MAX(daily_typing_pages) FROM employee_tbl GROUP BY id, name;
+SELECT MIN(daily_typing_pages) AS least, MAX(daily_typing_pages) AS max FROM employee_tbl;
 
-## 🚀 Features
+SELECT MIN(daily_typing_pages) FROM employee_tbl;
+SELECT id, name, MIN(daily_typing_pages) FROM employee_tbl GROUP BY id, name;
 
-- 🌦 Real-time weather data powered by OpenWeatherMap API
-- 🎨 3D animated scenes (rain, snow, clear, thunderstorm) via Three.js (react-three-fiber)
-- 🔍 City search with smooth animated transitions
-- 📱 Responsive design for mobile and desktop
-- 🌓 Light/Dark theme toggle with animated icons
-- 💬 Animated contact form powered by EmailJS
-- 📂 GitHub-linked project showcase
-- ⚙️ Performance-optimized with code splitting and lazy loading
+SELECT AVG(daily_typing_pages) FROM employee_tbl;
+SELECT name, AVG(daily_typing_pages) FROM employee_tbl GROUP BY name;
 
-## 📸 Screenshots
+SELECT SUM(daily_typing_pages) FROM employee_tbl;
 
-![Home](screenshots/home.png)
-![Weather View](screenshots/weather.png)
-![Contact Form](screenshots/contact.png)
 
-## 🛠 Tech Stack
+sting 
 
-- React (with Vite or CRA)
-- Tailwind CSS
-- Three.js (react-three-fiber)
-- GSAP & Framer Motion
-- EmailJS (for contact form)
-- OpenWeatherMap API
-- React Router
+SELECT ASCII('A');
+SELECT BIT_LENGTH('text');
+SELECT CHAR(65,66,67);
+SELECT CHAR_LENGTH('Hello');
+SELECT CONCAT('My','SQL');
+SELECT CONCAT_WS('-', '2025', '02', '01');
+SELECT FIND_IN_SET('b','a,b,c');
+SELECT HEX(255);
+SELECT INSERT('Database',3,4,'SQL');
+SELECT INSTR('Database','base');
+SELECT LEFT('Database',4);
+SELECT LENGTH('text');
+SELECT LOWER('SQL');
+SELECT UPPER('sql');
+SELECT STRCMP('ABC','ABC');
 
-## 📦 Installation
+numeric 
 
-```bash
-git clone https://github.com/your-username/project-bolt.git
-cd project-bolt
-npm install
-npm start
+SELECT ABS(-10);
+SELECT GREATEST(10,20,5);
+SELECT LEAST(10,20,5);
+SELECT MOD(29,3);
+SELECT PI();
+SELECT POWER(2,3);
+SELECT ROUND(5.678,2);
+SELECT SQRT(49);
+SELECT TRUNCATE(5.6789,2);
+
+date
+
+SELECT ADDDATE('2025-02-01', INTERVAL 5 DAY);
+SELECT ADDTIME('10:00:00','02:30:00');
+SELECT CURDATE();
+SELECT CURTIME();
+SELECT DATEDIFF('2025-02-10','2025-02-01');
+SELECT DAYNAME('2025-02-01');
+SELECT DAYOFMONTH('2025-02-01');
+SELECT DAYOFWEEK('2025-02-01');
+SELECT DAYOFYEAR('2025-02-01');
+SELECT HOUR('10:45:30');
+SELECT LAST_DAY('2025-02-01');
+SELECT MAKEDATE(2025,32);
+SELECT MAKETIME(10,30,00);
+SELECT MINUTE('10:45:30');
+SELECT MONTH('2025-02-01');
+SELECT MONTHNAME('2025-02-01');
